@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keaton's Flat Cap ✦ Buster Keaton Archive</title>
+  <title>Flat Cap Keaton ✦ Buster Keaton Archive</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- html2canvas for saving intertitle cards as images -->
@@ -246,16 +246,15 @@
               <span class="text-[10px] font-extrabold uppercase tracking-widest text-blush-500 bg-blush-50 px-2 py-0.5 rounded-full border border-blush-200">
                 1895–1966
               </span>
-              <span class="text-[10px] font-bold text-babyblue-500 hidden sm:inline">The Great Stone Face</span>
               <span id="nitrateModeBadge" class="hidden text-[9px] font-extrabold bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full border border-amber-300">
                 📽️ 1920s Tint Active
               </span>
             </div>
             <h1 class="font-cute text-xl sm:text-2xl font-extrabold tracking-tight text-slate-800">
               <span class="bg-gradient-to-r from-blush-500 via-pink-400 to-babyblue-500 bg-clip-text text-transparent">
-                Keaton's Flat Cap
+                Flat Cap Keaton
               </span>
-              <span class="text-xs font-serif italic text-pink-400 font-normal hidden md:inline ml-1">✦ Buster Keaton Stills Archive</span>
+              <span class="text-xs font-serif italic text-pink-400 font-normal hidden md:inline ml-1">✦ Buster Keaton Archive</span>
             </h1>
           </a>
         </div>
@@ -674,7 +673,7 @@
     </div>
   </div>
 
-  <!-- Edit Photo Modal (z-100 container / z-105 card so it renders above lightbox) -->
+  <!-- Edit Photo Modal (Fixed: z-100 container / z-105 card so it renders above lightbox) -->
   <div 
     id="editPhotoModal" 
     class="fixed inset-0 z-100 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300"
@@ -1316,9 +1315,9 @@
             nestedHtml = `
               <div class="sub-accordion-content ${isArbuckleOpen ? 'open' : ''} pl-4 pt-1 space-y-1">
                 ${nestedData.map(group => `
-                  <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider py-0.5">• ${group.year}</div>
+                  <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider py-0.5">• \${group.year}</div>
                   <div class="pl-2 space-y-1 border-l-2 border-pink-200">
-                    ${group.films.map(filmTitle => {
+                    \${group.films.map(filmTitle => {
                       const isFilmSelected = selectedFilm === filmTitle;
                       return `
                         <button 
